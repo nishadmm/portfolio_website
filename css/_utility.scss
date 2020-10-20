@@ -1,0 +1,121 @@
+.container {
+  max-width: $webpage-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $main-color;
+  }
+  &-light {
+    @extend %btn-shared;
+    color: set-text-color($light-color);
+    background-color: $light-color;
+  }
+  &-dark {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
+  }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: $main-color;
+  color: set-text-color($main-color);
+}
+
+// backgrounds
+.bg {
+  &-main {
+    background-color: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background-color: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background-color: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background-color: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0rem;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+// margin
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0rem;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+}
+
+.section-title {
+  display: block;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.bottom-line {
+  height: 3px;
+  width: 5rem;
+  background-color: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+button[type="submit"] {
+  width: 50%;
+}
